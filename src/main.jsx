@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useRef } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
@@ -6,31 +6,20 @@ const projects = [
   { title: 'Aquarius Baskets', note: 'Portfolio research platform', stack: 'FastAPI · Next.js · PostgreSQL · Redis · LangGraph', href: 'https://github.com/Pranay-Katari/aquariusETF' },
   { title: 'Real-Time BTC Analytics', note: 'Streaming market intelligence', stack: 'C++ · Python · FastAPI · WebSockets', href: 'https://github.com/Pranay-Katari/BTC-Analysis' },
   { title: 'Palladium Agent', note: 'Multi-agent market research', stack: 'Python · PyTorch · LangGraph · OpenAI API', href: 'https://github.com/Pranay-Katari/PalladiumAgent' },
+  { title: 'HousingAI', note: 'Context-aware real estate modeling', stack: 'PyTorch · Transformers · JavaScript', href: 'https://github.com/Pranay-Katari/HousingAI' },
+  { title: 'Company Analyzer', note: 'News-driven market forecasting', stack: 'JavaScript · Data analysis · Forecasting', href: 'https://github.com/Pranay-Katari/CompanyAnalyzer' },
+  { title: 'Centauri Online', note: 'Browser-based development environment', stack: 'JavaScript · MySQL · Full stack', href: 'https://github.com/Pranay-Katari/CentauriOnline' },
 ];
 
 function Glyph({ type }) {
   return type === 'arrow' ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg> : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v14M6 11l6 6 6-6" /></svg>;
 }
 
-function SignalField() {
-  const field = useRef(null);
-  useEffect(() => {
-    const el = field.current;
-    const move = (event) => {
-      const bounds = el.getBoundingClientRect();
-      el.style.setProperty('--x', `${((event.clientX - bounds.left) / bounds.width) * 100}%`);
-      el.style.setProperty('--y', `${((event.clientY - bounds.top) / bounds.height) * 100}%`);
-    };
-    el.addEventListener('pointermove', move);
-    return () => el.removeEventListener('pointermove', move);
-  }, []);
-  return <div className="signal-field" ref={field} aria-hidden="true">
-    <div className="orb orb-one" /><div className="orb orb-two" /><div className="orb orb-three" />
-    <div className="system-lines"><i /><i /><i /><i /><i /></div>
-    <div className="crosshair"><span /><span /></div>
-    <div className="pulse-ring ring-a" /><div className="pulse-ring ring-b" />
-    <div className="field-caption top">SIGNAL / SYSTEM / STORY</div>
-    <div className="field-caption bottom">{`{ curious by design }`}</div>
+function FloatingLights() {
+  return <div className="floating-lights" aria-hidden="true">
+    <span className="light light-violet" /><span className="light light-rose" /><span className="light light-amber" />
+    <span className="light-ray ray-one" /><span className="light-ray ray-two" /><span className="light-ray ray-three" />
+    <p>Signal, systems, story.</p>
   </div>;
 }
 
@@ -44,7 +33,7 @@ function App() {
         <p className="intro">CS @ UT Austin creating cloud-native data products, intelligent agents, and responsive software that makes complex signals useful.</p>
         <div className="hero-actions"><a className="primary" href="#work">Selected work <Glyph type="arrow" /></a><a className="text-link" href="#resume">Read resume <Glyph type="down" /></a></div>
       </div>
-      <SignalField />
+      <FloatingLights />
       <p className="scroll-note">Scroll to explore <span /></p>
     </section>
 
