@@ -24,7 +24,7 @@ Computer Science student at UT Austin who connects cloud data systems, polished 
 
 ## Capabilities and Constraints
 
-The page must remain concise, use the supplied black-to-violet-to-orange gradient direction, include purposeful animation, and let visitors scroll through resume content.
+The page must remain concise, use the supplied Himalayan landscape direction, include purposeful animation, and let visitors explore clear resume-derived evidence without losing the showcase feel.
 
 ## Brand Commitments
 

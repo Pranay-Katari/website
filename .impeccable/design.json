@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T00:00:00-05:00",
+  "title": "Design System: Pranay Katari Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "deep-indigo": { "role": "neutral", "displayName": "Deep Indigo", "canonical": "#041033", "tonalRamp": ["#041033", "#06183f", "#081949", "#143c80", "#426ca6", "#8eabd4", "#c9d9ee", "#f3f7fc"] },
+      "alpine-blue": { "role": "primary", "displayName": "Alpine Blue", "canonical": "#143c80", "tonalRamp": ["#041033", "#082154", "#0e2d6a", "#143c80", "#1c539d", "#628ac3", "#adc8e9", "#e7f0fa"] },
+      "alpenglow": { "role": "tertiary", "displayName": "Alpenglow", "canonical": "#eea1b7", "tonalRamp": ["#512243", "#7c365d", "#a14d76", "#c66c91", "#eea1b7", "#f5bfd0", "#f9dbe5", "#fff4f7"] },
+      "snow": { "role": "neutral", "displayName": "Snow", "canonical": "#f8f5f5", "tonalRamp": ["#32313a", "#595864", "#85848f", "#b4b2bb", "#d9d7dd", "#ebe8ec", "#f8f5f5", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Summit Display", "purpose": "Hero and large editorial statements." },
+      "body": { "displayName": "Technical Body", "purpose": "Readable evidence and project detail." },
+      "label": { "displayName": "Navigation Mono", "purpose": "Locations, metadata, and compact navigation." }
+    },
+    "shadows": [
+      { "name": "project-lift", "value": "0 27px 55px rgba(1, 8, 35, 0.38)", "purpose": "Project showcase panels at rest." },
+      { "name": "project-hover", "value": "0 37px 65px rgba(0, 7, 31, 0.55)", "purpose": "Project showcase panels on hover." }
+    ],
+    "motion": [
+      { "name": "landscape-drift", "value": "18s ease-in-out infinite alternate", "purpose": "Slow movement of the hero landscape." },
+      { "name": "reveal", "value": "0.72s cubic-bezier(.2,.75,.25,1)", "purpose": "Intersection-based content reveal." }
+    ],
+    "breakpoints": [{ "name": "mobile", "value": "760px" }]
+  },
+  "components": [
+    { "name": "Light Button", "kind": "button", "refersTo": "button-light", "description": "Hero call to action.", "html": "<a class=\"ds-button-light\" href=\"#projects\">Explore selected work <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>", "css": ".ds-button-light{display:inline-flex;align-items:center;gap:13px;background:#f8f5f5;color:#143c80;padding:15px 19px;font:800 .72rem Manrope,Arial,sans-serif;letter-spacing:.055em;text-transform:uppercase;text-decoration:none;box-shadow:0 12px 30px rgba(0,9,38,.25);transition:transform .22s ease,background .22s ease,box-shadow .22s ease}.ds-button-light svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8}.ds-button-light:hover{transform:translateY(-3px);background:#fff;box-shadow:0 18px 37px rgba(0,9,38,.35)}.ds-button-light:focus-visible{outline:2px solid #fff;outline-offset:5px}" },
+    { "name": "Monogram Navigation", "kind": "nav", "refersTo": "navigation", "description": "Sparse uppercase navigation over the landscape.", "html": "<nav class=\"ds-nav\"><a href=\"#top\">PK<span>·</span></a><div><a href=\"#work\">Work</a><a href=\"#projects\">Projects</a><a href=\"#about\">About</a></div></nav>", "css": ".ds-nav{display:flex;justify-content:space-between;align-items:center;color:#f8f5f5;font:800 .7rem Manrope,Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase}.ds-nav>div{display:flex;gap:29px}.ds-nav a{text-decoration:none;color:inherit}.ds-nav>div a{opacity:.78}.ds-nav>div a:hover{opacity:1}.ds-nav>span{color:#eea1b7}" },
+    { "name": "Project Panel", "kind": "card", "refersTo": "project-panel", "description": "Large horizontal-rail project artifact with atmospheric linework.", "html": "<article class=\"ds-project\"><span>Streaming market infrastructure</span><h3>Real-Time<br><em>BTC Engine</em></h3><p>Measured, concrete system evidence lives here.</p></article>", "css": ".ds-project{min-height:300px;padding:34px;background:linear-gradient(145deg,#426ca6,#0a245d 92%);color:#f8f5f5;box-shadow:0 27px 55px rgba(1,8,35,.38);font-family:Manrope,Arial,sans-serif}.ds-project span{font:500 .63rem monospace;letter-spacing:.075em;text-transform:uppercase;color:#f6d9e5}.ds-project h3{margin:70px 0 0;font-size:3rem;line-height:.85;letter-spacing:-.04em}.ds-project h3 em{font-family:Georgia,serif;font-weight:500}.ds-project p{margin-top:26px;line-height:1.7;color:#dbe6fb}" }
+  ],
+  "narrative": {
+    "northStar": "Himalayan Dawn",
+    "overview": "A landscape-led portfolio where deep alpine color, slow atmospheric movement, and concrete technical evidence make systems work feel expansive and grounded.",
+    "keyCharacteristics": ["Landscape-led atmosphere with moving light and precise linework.", "Strong sans-serif display paired with an italic serif for moments of lift.", "Flat information bands, trail-like experience entries, and oversized project panels."],
+    "rules": [{ "name": "The Altitude Rule", "body": "Dark surfaces carry the high-contrast content; light surfaces are used as spacious rests, never as generic card backgrounds.", "section": "colors" }, { "name": "The Two-Voice Rule", "body": "Use serif only as a deliberate counterpart within a display phrase or a project title line; body content remains sans-serif.", "section": "typography" }, { "name": "The Terrain Rule", "body": "Shadows must feel like distance in the landscape, not like floating dashboard cards.", "section": "elevation" }],
+    "dos": ["Do let the Himalayan image remain visible and legible as an environment, not a texture.", "Do use the alpenglow accent selectively for action and directional detail.", "Do preserve motion as slow, whole-surface atmosphere with a reduced-motion fallback.", "Do keep project and experience copy concrete, measured, and easy to scan."],
+    "donts": ["Don't add generic icon grids, glass panels, or pill-shaped interface chrome.", "Don't put serif typography into dense technical copy.", "Don't use multiple card systems to replace the experience trail or project rail.", "Don't let hero typography clip at mobile widths."]
+  }
+}
